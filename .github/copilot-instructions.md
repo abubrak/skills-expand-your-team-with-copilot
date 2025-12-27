@@ -16,9 +16,8 @@ This is the Mergington High School Management System - a FastAPI-based web appli
 - **Backend:** Python with FastAPI framework
 - **Frontend:** HTML, CSS, JavaScript (vanilla)
 - **Server:** Uvicorn (ASGI server)
-- **Database:** In-memory storage (data resets on server restart)
-- **Authentication:** Argon2 for password hashing
-- **Additional:** MongoDB support via pymongo
+- **Database:** MongoDB (local instance at mongodb://localhost:27017/)
+- **Authentication:** Argon2-CFFI for password hashing (use `argon2.PasswordHasher`)
 
 **Important:** Only use HTML, CSS, JavaScript, and Python. No other languages or frameworks.
 
@@ -64,7 +63,7 @@ src/
 - Never hardcode secrets, passwords, or sensitive information
 - Use environment variables or secure prompts for credentials
 - Implement proper authentication with login/logout functionality
-- Use Argon2 for password hashing (already available in dependencies)
+- Use Argon2-CFFI for password hashing: `from argon2 import PasswordHasher`
 
 ## Documentation
 
